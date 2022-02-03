@@ -1,0 +1,43 @@
+
+<form [formGroup]="itemActionForm">
+    <h4>Add Chart</h4>
+    <div>
+      <label for="name" class="visually-hidden">Name</label>
+      <input type="text" id="name" class="form-control"  placeholder="Name" aria-label="name" formControlName="name">
+      <span class="help-block" *ngIf="f.get('name').invalid && f.get('name').dirty">
+        <span *ngIf="f.get('name').errors['required']">Dashboard Item name is required!</span>
+      </span>
+    </div>
+
+    <div>
+      <label for="dataSourceId" class="visually-hidden">Select DataSource</label>
+      <select id="dataSourceId" class="form-control form-select" formControlName="dataSourceId" (change)="onDataSourceChange()">
+        <option value="">-- All DataSources --</option>
+        <option *ngFor="let source of dataSources" [ngValue]="source.id">
+          {{source.name}}
+        </option>
+      </select>
+      <span class="help-block" *ngIf="f.get('dataSourceId').invalid && f.get('dataSourceId').dirty">
+        <span *ngIf="f.get('dataSourceId').errors['required']">DataSource is required!</span>
+      </span>
+    </div>
+
+    <div>
+      <label for="chartType" class="visually-hidden">Available Chart Types </label>
+      <select id="chartType" class="form-control form-select" formControlName="chartType">
+        <option value="">-- All ChartTypes --</option>
+        <option *ngFor="let chart of chartTypes" [ngValue]="chart">
+          {{chart}}
+        </option>
+      </select>
+      <span class="help-block" *ngIf="f.get('chartType').invalid && f.get('chartType').dirty">
+        <span *ngIf="f.get('chartType').errors['required']">Chart Type is required!</span>
+      </span>
+    </div>
+  
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary" (click)="saveDashBoardItem()">Save</button>
+      <button type="button" class="btn btn-light" (click)="onCancel()">Cancel</button>
+    </div>   
+  
+  </form>

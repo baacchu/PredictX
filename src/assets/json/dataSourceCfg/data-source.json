@@ -1,0 +1,35 @@
+[
+    {
+        "id":1,
+        "name": "Solar Employment Growth",
+        "path": "data/solar-employment-growth.json",
+        "xAxis": "Category",
+        "legend" : ["Installation","Manufacturing","Sales & Distribution","Project Development","Other"],
+        "chartTypes": ["line","bar"]
+    },
+    {
+        "id":2,
+        "name": "Monthly Average Temperature",
+        "path": "data/monthly-average-temperature.json",
+        "xAxis": "Category",
+        "legend" : ["Tokyo","London"],
+        "chartTypes": ["line","pie","bar"]
+    },
+    {
+        "id":3,
+        "name": "Daily Sessions",
+        "path": "data/daily-sessions.json",
+        "xAxis": "DateTime",
+        "legend" : ["Users","Sessions"],
+        "chartTypes": ["line","pie"]
+    }
+    ,
+    {
+        "id":4,
+        "name": "USD to EUR exchange rate",
+        "path": "data/usd-to-eur-exchange-rate.json",
+        "xAxis": "DateTime",
+        "legend" : ["USD to EUR"],
+        "chartTypes": ["line","pie"]
+    }
+]

@@ -1,0 +1,33 @@
+<form [formGroup]="dashBoardActionForm">
+    <h4>Add Dashboard</h4>
+    <div>
+      <label for="name" class="visually-hidden">Name</label>
+      <input type="text" id="name" class="form-control"  placeholder="Name" aria-label="name" formControlName="name">
+      <span class="help-block" *ngIf="f.get('name').invalid && f.get('name').dirty">
+        <span *ngIf="f.get('name').errors['required']">Dashboard name is required!</span>
+      </span>
+    </div>
+
+    <div>
+      <label for="description" class="visually-hidden">Description</label>
+      <input type="text" id="description" class="form-control" placeholder="Description" aria-label="Description" formControlName="description">
+      <span class="help-block" *ngIf="f.get('description').invalid && f.get('description').dirty">
+        <span *ngIf="f.get('description').errors['required']">Description is required!</span>
+      </span>
+    </div>
+
+    <div>
+      <label for="createdBy" class="visually-hidden">Created By</label>
+      <input type="text" id="createdBy" class="form-control" placeholder="Created By" aria-label="Description" formControlName="createdBy">
+      <span class="help-block" *ngIf="f.get('createdBy').invalid && f.get('createdBy').dirty">
+        <span *ngIf="f.get('createdBy').errors['required']">Created By is required!</span>
+      </span>
+    </div>
+  
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary" (click)="saveDashBoard()">Save</button>
+      <button type="button" class="btn btn-light" (click)="onCancel()">Cancel</button>
+    </div>   
+  
+  </form>
+  

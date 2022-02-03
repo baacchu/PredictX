@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Eco Dash",
+        "description" : "Eco Dash",
+        "dashBoardItemIds": [1,2]
+    },
+    {
+        "id": 2,
+        "name": "Weather",
+        "description" : "Weather",
+        "dashBoardItemIds": [2,3]
+    },
+    {
+        "id": 3,
+        "name": "Budget",
+        "description" : "Budget",
+        "dashBoardItemIds": [3,4]
+    }
+]

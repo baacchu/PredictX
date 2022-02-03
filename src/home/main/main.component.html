@@ -1,0 +1,38 @@
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened class="predictX-nav">
+        <header>
+            <h1 class="logo">{{title}}</h1>
+          </header>
+        <mat-nav-list>
+            <a mat-list-item *ngFor="let item of dashboards" (click)="displayDashboard(item)">
+                <i class="bi bi-graph-up"></i> <span>{{ item.name }}</span>
+            </a>
+            <hr />
+            <button class="btn btn-primary btn-icon" type="button" (click)="addNewDashBoard()"><i class="bi bi-plus-circle-fill"></i></button>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-4"><h2>{{selectedDashboard.name}}</h2></div>
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-outline-primary" (click)="addNewDashBoardItem()"><i class="bi bi-plus-lg"></i>Add Chart</button>
+                </div>
+            </div>
+        </div>        
+       
+        <div>
+            <app-dashboard [dashBoard]="selectedDashboard" ></app-dashboard>
+        </div>
+    </mat-sidenav-content>
+    
+</mat-sidenav-container>
+
+<div *ngIf="isActiveDashBoard" class="overlay">
+    <app-dashboard-action  [dashBoard]="actionItem" (dbActionEvent)="onDbActionEvent($event)"></app-dashboard-action>
+</div>
+<div *ngIf="isActiveDashBoardItem" class="overlay">
+    <app-dashboard-item-action (dbItemActionEvent)="onDbItemActionEvent($event)"></app-dashboard-item-action>
+</div>
+

@@ -1,0 +1,9 @@
+@import "../../../../assets/scss/abstracts/variables";
+
+::ng-deep .highcharts-title {
+    fill: $bright-blue !important;
+}
+
+::ng-deep .highcharts-container {
+    border: 1px solid $bright-blue;
+}

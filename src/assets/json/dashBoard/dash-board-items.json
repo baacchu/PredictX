@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Element 1",
+        "chartType": "line",
+        "dataSourceId": 1
+    },
+    {
+        "id": 2,
+        "name": "Element 2",
+        "chartType": "line",
+        "dataSourceId": 2
+    },
+    {
+        "id": 3,
+        "name": "Element 3",
+        "chartType": "line",
+        "dataSourceId": 3
+    },
+    {
+        "id": 4,
+        "name": "Element 4",
+        "chartType": "line",
+        "dataSourceId": 4
+    }
+]

@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row" *ngIf="dashBoard.dashBoardItemIds.length > 0">     
+    <div *ngFor="let item of dashBoard.dashBoardItemIds" class="col-md-6 col-12 pb-4">
+      <app-dashboard-item [dashBoardtemId]=item></app-dashboard-item>
+    </div>    
+  </div>
+
+  <div class="row" *ngIf="dashBoard.dashBoardItemIds.length == 0">     
+    <div class="col-12 pb-4">
+     <h5>Please add new Charts!</h5>
+    </div>    
+  </div>
+</div>

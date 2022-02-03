@@ -1,0 +1,109 @@
+@import "../abstracts/variables";
+
+body {
+    background-color: $white;
+}
+
+.container {
+    background-color: $grey;
+}
+
+.mat-drawer-container {
+    height: 100vh;
+    background-color: $grey;
+}
+
+.predictX-nav {
+    background-color: $blue;
+
+    .logo { 
+        color: $bright-blue;    
+        padding: 30px;
+    }
+}
+
+.btn {    
+    border-radius: 25px;
+    padding: 6px 16px;
+
+    &.btn-primary {
+        background-color: transparent;
+        border-color: 1px solid $bright-blue;
+
+        &.btn-icon {
+            border-color: transparent;
+            padding: 0;
+            margin: 0 auto;
+
+            &:hover {
+                color: $bright-blue;
+            }
+
+            &:focus {
+                box-shadow: 0 0 0 0.25rem transparent;
+            }
+        }       
+    }
+
+    &.btn-outline-primary {
+        border-color: $blue;
+        color: $blue;
+
+        &:hover {
+            background-color: $blue;
+            color: $white;
+        }
+    }
+}
+
+.btn-group {
+    .btn {
+        &.btn-primary {
+            background-color: $blue;
+            border-color: transparent;
+            color: $white;
+            
+            &:hover {
+                background-color: $bright-blue;
+                color: $white;
+            }
+        }
+
+        &.btn-light {
+            background-color: $grey;
+        }
+    }   
+}
+
+.bi::before, [class^="bi-"]::before, [class*=" bi-"]::before {
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+hr {
+    background-color: $grey;
+}    
+
+h2 {
+    color: $black;
+    line-height: 1;
+}
+
+.overlay {
+    background:rgba(0,0,0,0.5);
+    width:100%; height:100%;
+    position:absolute; 
+    top:0; 
+    left:0; 
+    z-index:99998;
+
+    form {
+        position: relative;
+        width: 500px;
+        background-color: $white;
+        padding: 50px 30px;
+        transform: translate(-50%,-50%);
+        top: 50%; 
+        left: 50%;
+    }
+}
