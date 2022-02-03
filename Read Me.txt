@@ -1,0 +1,41 @@
+Prerequisite:
+1.Angular 13
+2.Highchart 9
+3.Angular material
+4.Bootstrap latest version.
+5.Lodash
+
+
+Please make sure that node.js V16.2 and npm 8.2 is install.
+I had issue's compiling highchart module on my machine.
+
+Functionalities implemented:
+1. You should be able to add new Dashboard.
+2. You should be able to new chart to existing Dashboard and new Dashboard.
+3. Implemented service (DI) to perform CRUD operation and fetching the chart data.
+4. Implemented a separate module for future scalability. 
+5. Applications read's data about dashboard from json file and get's related items.
+	--src\assets\json\dashBoard
+6. Configuration for each chart and it's datasource is read from json file.
+	--src\assets\json\dataSourceCfg
+7. All data for graph is stored in json file.
+	--src\assets\json\data
+8. Configuration data like dashBoard list, dashBoard items list, datasource list, etc is 
+   stored using angular-in-memory-web-api.
+9. Data for graph is read straight from the files.
+10.UI developed using SASS.
+11.Used Reactive forms using FormBuilder and implemented validations.
+12.Made sure unit testing and are running successfully.
+13.Made use of bootstrap for styling and icons.
+14.Application is responsive to good extent.
+
+Testing:
+All dependencies issues resolved for components and services.
+I have not added any new test cases because of time constraint.
+But, you should be able to run successfully ng test without any error.
+
+
+Please let me know, if you have any issue's running the application.
+
+Thanks
+Dharmen
